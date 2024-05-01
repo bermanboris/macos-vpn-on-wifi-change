@@ -27,7 +27,7 @@ Before you begin, ensure you have the following:
    ```
 
 2. **Customize the Launch Agent:**
-   Set your specific Wi-Fi network and VPN service names by first defining them as variables. Replace `<YourWiFiName>` and `<YourVPNName>` with your actual Wi-Fi and VPN names:
+   Set your specific Wi-Fi network and VPN service names by first defining them as variables. Replace `<Your WiFi Name>` and `<Your VPN Name>` with your actual Wi-Fi and VPN names:
 
    ```shell
    WIFI_NAME="<Your WiFi Name>"
