@@ -27,11 +27,15 @@ Before you begin, ensure you have the following:
    ```
 
 2. **Customize the Launch Agent:**
-   Set your specific Wi-Fi network and VPN service names by replacing <YourWiFiName> and <YourVPNName> with your details:
+   Set your specific Wi-Fi network and VPN service names by first defining them as variables. Replace `<YourWiFiName>` and `<YourVPNName>` with your actual Wi-Fi and VPN names:
+
    ```shell
    WIFI_NAME="<Your WiFi Name>"
    VPN_NAME="<Your VPN Name>"
-   
+   ```
+
+   Next, use these variables to update your .plist file:
+   ```shell
    sed -i '' "s/<Your WiFi Name>/$WIFI_NAME/g" ~/Library/LaunchAgents/com.user.networkwatcher.plist
    sed -i '' "s/<Your VPN Name>/$VPN_NAME/g" ~/Library/LaunchAgents/com.user.networkwatcher.plist
    ```
