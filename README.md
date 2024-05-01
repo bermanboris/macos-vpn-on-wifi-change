@@ -48,6 +48,25 @@ Before you begin, ensure you have the following:
    ```
 
 
+
+## Uninstallation
+
+If you need to remove the Launch Agent and stop it from managing your VPN connections, follow these steps:
+
+1. **Unload the Launch Agent:**
+   Before deleting the Launch Agent file, ensure it's unloaded from your system to prevent it from being automatically reloaded by the system. Run the following command in the Terminal:
+
+   ```shell
+   launchctl unload ~/Library/LaunchAgents/com.user.networkwatcher.plist
+
+
+2. **Remove the Launch Agent File:**
+   After unloading the Launch Agent, you can safely delete the .plist file. Use the following command to remove it:
+
+   ```shell
+   rm ~/Library/LaunchAgents/com.user.networkwatcher.plist
+   ```
+
 ## How It Works
 
 Once installed, the script will monitor your Mac's network connection (by watching network related files changes). When it detects a connection to the specified Wi-Fi network, it will automatically attempt to connect to the specified VPN. If the network connection changes away from the specified Wi-Fi network, it will disconnect from the VPN.
