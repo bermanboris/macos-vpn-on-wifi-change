@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+    <key>Label</key>
+    <string>com.user.networkwatcher</string>
+    <key>ProgramArguments</key>
+    <array>
+        <string>/bin/sh</string>
+        <string>-c</string>
+        <string>SSID='<Your WiFi Name>'; VPN_NAME='<Your VPN Name>'; currentNetwork=$(networksetup -getairportnetwork en0 | cut -d ':' -f 2 | xargs); if [ "$currentNetwork" = "$SSID" ]; then networksetup -connectpppoeservice "$VPN_NAME"; else networksetup -disconnectpppoeservice "$VPN_NAME"; fi</string>
+    </array>
+    <key>WatchPaths</key>
+    <array>
+        <string>/Library/Preferences/SystemConfiguration/com.apple.airport.preferences.plist</string>
+        <string>/Library/Preferences/SystemConfiguration/com.apple.wifi.message-tracer.plist</string>
+        <string>/Library/Preferences/com.apple.wifi.known-networks.plist</string>
+    </array>
+    <key>RunAtLoad</key>
+    <true/>
+</dict>
+</plist>
