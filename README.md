@@ -23,7 +23,7 @@ Before you begin, ensure you have the following:
    Navigate to the directory where you want to place the Launch Agent, and run the following command:
 
    ```shell
-   curl -L https://github.com/autoassistant/macos-vpn-on-wifi-change/raw/main/com.user.networkwatcher.plist -o ~/Library/LaunchAgents/com.user.networkwatcher.plist
+   curl -L https://github.com/bermanboris/macos-vpn-on-wifi-change/raw/main/com.user.networkwatcher.plist -o ~/Library/LaunchAgents/com.user.networkwatcher.plist
    ```
 
 2. **Customize the Launch Agent:**
